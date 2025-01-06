@@ -8,7 +8,10 @@ UTF-8
 
 # 方法
 
+
 # 結果
+![schema](2.schema/por.png)
+![simlation](2.schema/tb_por.png)
 
 # 検討と考察
 
