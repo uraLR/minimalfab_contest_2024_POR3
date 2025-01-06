@@ -1,0 +1,36 @@
+** sch_path: /home/ura/project/minimal_contest2024/OpenRule1umPDK_setupEDA/xschem/por.sch
+.subckt por vdd sel_0.71v sel_0.76v sel_0.8v sel_0.9v por sel_1v por_x vss
+*.iopin vdd
+*.iopin vss
+*.opin por
+*.iopin sel_1v
+*.iopin sel_0.9v
+*.iopin sel_0.8v
+*.iopin sel_0.76v
+*.iopin sel_0.71v
+*.opin por_x
+M1 por net1 vdd vdd pch w=40u l=10u as=0 ps=0 ad=0 pd=0 m=1
+M2 por net1 net4 net4 nch w=10u l=10u as=0 ps=0 ad=0 pd=0 m=1
+M3 por net1 vdd vdd pch w=40u l=10u as=0 ps=0 ad=0 pd=0 m=1
+M5 por net1 vdd vdd pch w=40u l=10u as=0 ps=0 ad=0 pd=0 m=1
+M6 vdd por net4 net4 nch w=10u l=10u as=0 ps=0 ad=0 pd=0 m=1
+M7 net4 net1 vss vss nch w=10u l=10u as=0 ps=0 ad=0 pd=0 m=1
+C5 net1 vss 0.413p m=1
+C6 net1 vss 0.413p m=1
+C7 net1 vss 0.413p m=1
+C8 net1 vss 0.413p m=1
+RP9 net2 net3 3.6k ac=1k m=1
+RP10 net5 net3 3.6k ac=1k m=1
+RN11 net1 net5 3.6k ac=1k m=1
+RP1 net6 net7 3.6k ac=1k m=1
+RN1 sel_0.9v sel_1v 0.54k ac=1k m=1
+RN2 sel_0.8v sel_0.9v 0.54k ac=1k m=1
+RN3 sel_0.76v sel_0.8v 0.54k ac=1k m=1
+RN4 sel_0.71v sel_0.76v 0.54k ac=1k m=1
+RN5 sel_1v net6 0.54k ac=1k m=1
+RP2 net7 por_x 3.6k ac=1k m=1
+M9 por_x por vdd vdd pch w=40u l=10u as=0 ps=0 ad=0 pd=0 m=1
+M10 por_x por vss vss nch w=10u l=10u as=0 ps=0 ad=0 pd=0 m=5
+M4 net1 vdd vdd vdd pch w=40u l=10u as=0 ps=0 ad=0 pd=0 m=1
+M8 net2 net6 vdd vdd pch w=40u l=10u as=0 ps=0 ad=0 pd=0 m=1
+.ends
