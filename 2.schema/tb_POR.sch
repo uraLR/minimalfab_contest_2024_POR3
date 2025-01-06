@@ -11,18 +11,21 @@ N 160 -10 190 -10 {lab=por_x}
 N 0 -160 -0 -100 {lab=vdd}
 N -240 -160 -0 -160 {lab=vdd}
 N -240 -160 -240 -140 {lab=vdd}
-N -170 -160 -170 -50 {lab=vdd}
-N -170 -50 -170 -30 {lab=vdd}
-N -170 -30 -170 10 {lab=vdd}
-N -170 10 -170 30 {lab=vdd}
+N -170 -30 -140 -30 {lab=#net1}
+N -170 -10 -140 -10 {lab=#net2}
+N -170 10 -140 10 {lab=#net3}
 N -170 30 -140 30 {lab=vdd}
+N -190 30 -170 30 {lab=vdd}
+N -150 -50 -140 -50 {lab=#net4}
+N -170 -50 -150 -50 {lab=#net4}
+N -190 -160 -190 30 {lab=vdd}
 C {por.sym} 10 10 0 0 {name=x1}
-C {devices/vsource.sym} -240 -110 0 0 {name=V1 value="PWL(0s 0v 10u 0v 1m 3v 90m 3v 90.1m 0v)" savecurrent=false}
+C {devices/vsource.sym} -240 -110 0 0 {name=V1 value="PWL(0s 0v 10u 0v 1m 3v 900m 3v 900.10m 0v)" savecurrent=false}
 C {devices/gnd.sym} -130 120 0 0 {name=l1 lab=GND}
 C {devices/simulator_commands.sym} 100 -260 0 0 {name=COMMANDS
 simulator=ngspice
 only_toplevel=false 
-value=".tran 1u 100000u"
+value=".tran 1u 1000000u"
 * ngspice commands}
 C {devices/code.sym} 240 0 0 0 {name=MF20_MODELS
 only_toplevel=true
